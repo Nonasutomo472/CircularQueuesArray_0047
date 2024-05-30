@@ -68,6 +68,14 @@ public:
 			return;
 
 	}
+	
+	cout << "\nElement in the queue are ...\n";
+
+	//jika FRONT <= REAR, iterasi dari FRONT hingga REAR
+	if (FRONT <= REAR) {
+		while (FRONT <= REAR) {
+			cout << queue_array[FRONT] << "  ";
+
 
 
 };
