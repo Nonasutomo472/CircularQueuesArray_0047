@@ -62,37 +62,57 @@ public:
 	}
 
 	void display() {
+		
 		// cek apakah antrian kosong 
 		if (FRONT == -1) {
 			cout << "Queue is empty\n";
 			return;
 
-	}
-	
-	cout << "\nElement in the queue are ...\n";
-
-	//jika FRONT <= REAR, iterasi dari FRONT hingga REAR
-	if (FRONT <= REAR) {
-		while (FRONT <= REAR) {
-			cout << queue_array[FRONT] << "  ";
-
 		}
-		cout << endl;
-	}
-	else {
-		// jika FRONT > REAL. iterasi dari FRONT hingga array 
-		while (FRONT <= max - 1) {
-			cout << queue_array[FRONT] << " ";
-			FRONT++;
+
+		cout << "\nElement in the queue are ...\n";
+
+		//jika FRONT <= REAR, iterasi dari FRONT hingga REAR
+		if (FRONT <= REAR) {
+			while (FRONT <= REAR) {
+				cout << queue_array[FRONT] << "  ";
+
+			}
+			cout << endl;
 		}
-		FRONT = 0;
+		else {
+			// jika FRONT > REAL. iterasi dari FRONT hingga array 
+			while (FRONT <= max - 1) {
+				cout << queue_array[FRONT] << " ";
+				FRONT++;
+			}
+			FRONT = 0;
 
-		//iterasi dari awal array hingga REAR
-		while (FRONT <= REAR) {
-			cout << queue_array[FRONT] << " ";
-			FRONT++;
-
+			//iterasi dari awal array hingga REAR
+			while (FRONT <= REAR) {
+				cout << queue_array[FRONT] << " ";
+				FRONT++;
+			}
+			cout << endl;
 		}
 	}
 
 };
+
+int main(){
+
+	Queues q;
+	char ch;
+
+	while (true) {
+		try {
+			cout << "Menu" << endl;
+			cout << "1. Implement insert operation" << endl;
+			cout << "2. Implement delete operation" << endl;
+			cout << "3. Display values" << endl;
+			cout << "4. Exit" << endl;
+			cout << "Enter your choice (1-4):";
+			cin >> ch;
+			cout << endl;
+
+			
