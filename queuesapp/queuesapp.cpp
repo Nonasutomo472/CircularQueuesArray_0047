@@ -76,6 +76,15 @@ public:
 		while (FRONT <= REAR) {
 			cout << queue_array[FRONT] << "  ";
 
-
+		}
+		cout << endl;
+	}
+	else {
+		// jika FRONT > REAL. iterasi dari FRONT hingga array 
+		while (FRONT <= max - 1) {
+			cout << queue_array[FRONT] << " ";
+			FRONT++;
+		}
+	}
 
 };
